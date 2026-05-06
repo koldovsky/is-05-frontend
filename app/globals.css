@@ -2,25 +2,193 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #252b42;
+
+  --figmaland-color-primary: #2091f9;
+  --figmaland-color-text-default: #252b42;
+  --figmaland-color-text-secondary: #374754;
+  --figmaland-color-text-inverse: #ffffff;
+  --figmaland-color-background-default: #ffffff;
+  --figmaland-color-background-dark: #18171d;
+  --figmaland-color-border-default: #e8e8e8;
+
+  --figmaland-font-sans: "Graphik", var(--font-geist-sans), Arial, Helvetica,
+    sans-serif;
+  --figmaland-font-mobile: "Roboto", var(--font-geist-sans), Arial, Helvetica,
+    sans-serif;
+
+  --figmaland-radius-button: 35px;
+  --figmaland-radius-input: 39px;
+
+  --figmaland-space-control-x: 38px;
+  --figmaland-space-control-y: 18px;
+  --figmaland-space-input-x: 35px;
+  --figmaland-space-input-y: 19px;
+  --figmaland-space-text-inset: 10px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-figmaland-primary: var(--figmaland-color-primary);
+  --color-figmaland-text: var(--figmaland-color-text-default);
+  --color-figmaland-muted: var(--figmaland-color-text-secondary);
+  --color-figmaland-inverse: var(--figmaland-color-text-inverse);
+  --color-figmaland-dark: var(--figmaland-color-background-dark);
+  --color-figmaland-border: var(--figmaland-color-border-default);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-figmaland: var(--figmaland-font-sans);
+  --font-figmaland-mobile: var(--figmaland-font-mobile);
+
+  --text-figmaland-h1: 74px;
+  --text-figmaland-h1--line-height: 84px;
+  --text-figmaland-h1--letter-spacing: 0.2px;
+  --text-figmaland-h1--font-weight: 700;
+
+  --text-figmaland-h2: 48px;
+  --text-figmaland-h2--line-height: 55px;
+  --text-figmaland-h2--letter-spacing: 0.2px;
+  --text-figmaland-h2--font-weight: 400;
+
+  --text-figmaland-h3: 20px;
+  --text-figmaland-h3--line-height: 28px;
+  --text-figmaland-h3--letter-spacing: 0.1px;
+  --text-figmaland-h3--font-weight: 700;
+
+  --text-figmaland-h4: 28px;
+  --text-figmaland-h4--line-height: 40px;
+  --text-figmaland-h4--letter-spacing: 0.2px;
+  --text-figmaland-h4--font-weight: 400;
+
+  --text-figmaland-button: 20px;
+  --text-figmaland-button--line-height: 20px;
+  --text-figmaland-button--letter-spacing: 0.2px;
+  --text-figmaland-button--font-weight: 400;
+
+  --text-figmaland-h6: 16px;
+  --text-figmaland-h6--line-height: 23px;
+  --text-figmaland-h6--letter-spacing: 0.1px;
+  --text-figmaland-h6--font-weight: 400;
+
+  --text-figmaland-paragraph: 18px;
+  --text-figmaland-paragraph--line-height: 25px;
+  --text-figmaland-paragraph--letter-spacing: 0.2px;
+  --text-figmaland-paragraph--font-weight: 400;
+
+  --text-figmaland-link: 15px;
+  --text-figmaland-link--line-height: 28px;
+  --text-figmaland-link--letter-spacing: 0.2px;
+  --text-figmaland-link--font-weight: 400;
+
+  --text-figmaland-mobile-menu: 30px;
+  --text-figmaland-mobile-menu--line-height: 45px;
+  --text-figmaland-mobile-menu--letter-spacing: 0.2px;
+  --text-figmaland-mobile-menu--font-weight: 400;
+
+  --text-figmaland-input: 19px;
+  --text-figmaland-input--line-height: 16px;
+  --text-figmaland-input--letter-spacing: 0.1px;
+  --text-figmaland-input--font-weight: 400;
+
+  --radius-figmaland-button: var(--figmaland-radius-button);
+  --radius-figmaland-input: var(--figmaland-radius-input);
+  --spacing-figmaland-control-x: var(--figmaland-space-control-x);
+  --spacing-figmaland-control-y: var(--figmaland-space-control-y);
+  --spacing-figmaland-input-x: var(--figmaland-space-input-x);
+  --spacing-figmaland-input-y: var(--figmaland-space-input-y);
+  --spacing-figmaland-text-inset: var(--figmaland-space-text-inset);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #252b42;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--figmaland-font-sans);
+}
+
+@layer components {
+  .figmaland-h1 {
+    color: var(--figmaland-color-text-default);
+    font: 700 74px / 84px var(--figmaland-font-sans);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-h2 {
+    color: var(--figmaland-color-text-default);
+    font: 400 48px / 55px var(--figmaland-font-sans);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-h3 {
+    color: var(--figmaland-color-text-default);
+    font: 700 20px / 28px var(--figmaland-font-sans);
+    letter-spacing: 0.1px;
+  }
+
+  .figmaland-h4 {
+    color: var(--figmaland-color-text-secondary);
+    font: 400 28px / 40px var(--figmaland-font-sans);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-h6 {
+    color: var(--figmaland-color-text-secondary);
+    font: 400 16px / 23px var(--figmaland-font-sans);
+    letter-spacing: 0.1px;
+  }
+
+  .figmaland-paragraph {
+    color: var(--figmaland-color-text-secondary);
+    font: 400 18px / 25px var(--figmaland-font-sans);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-link {
+    color: var(--figmaland-color-text-default);
+    font: 400 15px / 28px var(--figmaland-font-sans);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-mobile-menu {
+    color: #000000;
+    font: 400 30px / 45px var(--figmaland-font-mobile);
+    letter-spacing: 0.2px;
+  }
+
+  .figmaland-button {
+    align-items: center;
+    background: var(--figmaland-color-primary);
+    border-radius: var(--figmaland-radius-button);
+    color: var(--figmaland-color-text-inverse);
+    display: inline-flex;
+    font: 400 20px / 20px var(--figmaland-font-sans);
+    justify-content: center;
+    letter-spacing: 0.2px;
+    min-height: 56px;
+    padding: var(--figmaland-space-control-y) var(--figmaland-space-control-x);
+  }
+
+  .figmaland-input {
+    background: var(--figmaland-color-background-default);
+    border: 1px solid var(--figmaland-color-border-default);
+    border-radius: var(--figmaland-radius-input);
+    color: var(--figmaland-color-background-dark);
+    font: 400 19px / 16px var(--figmaland-font-mobile);
+    letter-spacing: 0.1px;
+    padding: var(--figmaland-space-input-y) var(--figmaland-space-input-x);
+    width: 300px;
+  }
+
+  .figmaland-input::placeholder {
+    color: var(--figmaland-color-background-dark);
+    opacity: 1;
+  }
 }
