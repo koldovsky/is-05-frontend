@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 187.397 187.397" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<circle id="Ellipse 3" cx="93.6985" cy="93.6985" r="93.6985" fill="var(--fill-0, #2091F9)"/>
+<g id="el:play" clip-path="url(#clip0_0_336)">
+<path id="Vector" d="M79.2702 71.2923L118.311 94.7169L79.2702 118.142V71.2923Z" fill="var(--fill-0, white)"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_336">
+<rect width="46.8492" height="46.8492" fill="white" transform="translate(75.3661 71.2923)"/>
+</clipPath>
+</defs>
+</svg>
